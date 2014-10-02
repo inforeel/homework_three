@@ -44,7 +44,8 @@ user_id = 2
 index_number = data.find_index { |x| x [:user][:id] == user_id}
 puts "user_2 is at index #{index_number} in the data array"
 
-#part the fifth. Search data for users betwen 18 to 25 and print their usernames and ages
+#part the fifth. Search data for users betwen 18 to 25 and print their usernames and ages. Still fiddling.
+#Need a way to limit it to only those 18 to 25 since originally it was 18 to 75.
 
 # first, declaring that the ages in the variable users_ages can only be in the range from 18 to 25
 users_ages = (18..25)
@@ -55,6 +56,7 @@ puts "Username        Age"
 puts "========        ====="
 
 #this bit should be selecting the username and age based on the parameters set in the .each bit. Still fiddling.
+#?
 data.select {|y| y [:user][:age]}.each{}
 
 #these should print out the faux variable with the username info and the age info
