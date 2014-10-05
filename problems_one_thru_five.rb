@@ -55,23 +55,9 @@ puts "SEARCH RESULTS"
 puts "Username        Age"
 puts "========        ====="
 
-#this bit should be selecting the username and age based on the parameters set in the .each bit. Still fiddling.
-#?
-data.select {|y| y [:user][:age]}.each{}
+#this bit should be looking through the array named data and selecting any element in that array where the age field is between 18-25.
+# the spacing is weird when it prints out a little.
 
-#these should print out the faux variable with the username info and the age info
-puts "y#{[:user][:username]}"         puts "y#{[:user][:age]}"
-
-
-
-
-
-
-
-
-
-
-
-
+data.select {|y| users_ages.include?(y[:user][:age])}.each {|y| puts "#{y[:user][:username]}          #{y[:user][:age]}"} 
 
 
